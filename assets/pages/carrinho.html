@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="/assets/css/carrinho.css">
+</head>
+<body>
+
+    <header>
+        <h1>Meu Carrinho</h1>
+    </header>
+
+    <main>
+        <section class="cart-items">
+            <h2>Itens</h2>
+            <div id="cart-list">
+                <div class="item">
+                    <img src="https://via.placeholder.com/150/007bff/FFFFFF?text=Camiseta" alt="Camiseta Básica">
+                    <div class="item-details">
+                        <h3>Jordan 4</h3>
+                        <p>Preco: R$ 59,90</p>
+                    </div>
+                    <div class="item-actions">
+                        <div class="quantity-control">
+                            <button>-</button>
+                            <span>2</span>
+                            <button>+</button>
+                        </div>
+                        <button class="remove-btn">Remover</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="https://via.placeholder.com/150/28a745/FFFFFF?text=Calça" alt="Calça Jeans">
+                    <div class="item-details">
+                        <h3>New Balance</h3>
+                        <p>Preco: R$ 129,90</p>
+                    </div>
+                    <div class="item-actions">
+                        <div class="quantity-control">
+                            <button>-</button>
+                            <span>1</span>
+                            <button>+</button>
+                        </div>
+                        <button class="remove-btn">Remover</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="cart-summary">
+            <h2>Resumo do Pedido</h2>
+            <div class="summary-details">
+                <p>Subtotal: <span>R$ 249,70</span></p>
+                <p>Frete: <span>R$ 15,00</span></p>
+                <hr>
+                <p class="total">Total: <span>R$ 264,70</span></p>
+            </div>
+            <a href="/assets/pages/pagamento.html">
+                <button id="checkout-btn">Finalizar Compra</button>
+              </a>
+            
+        </aside>
+    </main>
+
+</body>
+</html>
