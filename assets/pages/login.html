@@ -2,30 +2,47 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-<link rel="stylesheet" href="/assets/css/login.css">
-<link rel="shortcut icon" href="/assets/img/logo.png" type="image/x-icon"> 
-    <title>Tela de Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <link rel="shortcut icon" href="/assets/img/logo.png" type="image/x-icon"> 
+    <title>The Crow</title>
 </head>
-<h1>Seja-bem vindo A</h1>
-<img src="/assets/img/logo.site.png" alt="Logo do site">
 <body>
-    <div>
-        <h2>Login</h2>
-        <tela>
-            <texto for="usuario">Usuário</texto>
-            <input type="text" id="usuario" name="usuario" required>
-            <texto for="senha">Senha</texto>
-            <input type="password" id="senha" name="senha" required>
-            <button type="submit">Entrar</button>
-            <br><br>
-            <texto>
-                <input type="checkbox" id="lembrar" name="lembrar">
-                Lembrar-me
-        </texto>
-            <br><br>
-            <a href="#" style="font-size: 0.9em;">Esqueceu a senha?</a>
+    
+    <div class="container_login">
+        
+        <header class="cabecalho_login">
+            <h1 class="titulo_boas_vindas">Seja bem-vindo de volta!</h1>
+            <img src="/assets/img/logo.site.png" alt="Logo The Crow" class="logo_login">
+        </header>
+
+        <form class="formulario_login">
+            <h2 class="titulo_formulario">Acessar Conta</h2>
+
+            <div class="campo_grupo">
+                <input type="text" id="usuario" name="usuario" placeholder="Usuário (ou Email)" required>
+            </div>
+
+            <div class="campo_grupo">
+                <input type="password" id="senha" name="senha" placeholder="Senha" required>
+            </div>
+
+            <div class="opcoes_login">
+                <div class="lembrar_me">
+                    <input type="checkbox" id="lembrar" name="lembrar">
+                    <span>Lembrar-me</span>
+                </div>
+                <a href="#" class="link_ajuda">Esqueceu a senha?</a>
+            </div>
             
-        </tela>
+            <button type="submit" class="btn_entrar">ENTRAR</button>
+            <p class="link_cadastro">
+                Não tem uma conta? <a href="cadastro.html" class="link_ajuda">Cadastre-se aqui</a>
+            </p>
+        </form>
     </div>
+
 </body>
+</html>
 </html>
