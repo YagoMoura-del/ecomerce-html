@@ -1,95 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 body {
-    background: linear-gradient(120deg, #ff0000, #000000 , #000000, #ff0000);
+    background-color: #0c0c0c; 
     min-height: 100vh;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: #e0e0e0;
 }
 
-h1 {
-    margin-top: 40px;
-    margin-bottom: 10px;
-    color: #ffffff;
-    font-size: 2.2em;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-align: center;
+.container_login {
+    background: #1a1a1a; 
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); 
+    max-width: 400px;
+    box-sizing: border-box;
 }
-img {
-    width: 200px;
-    height: 200px;
+
+.cabecalho_login {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.titulo_boas_vindas {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.logo_login {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.titulo_formulario {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.campo_grupo {
     margin-bottom: 20px;
 }
 
-div {
-    background: #222121;
-    padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 32px 0 rgba(44, 62, 80, 0.2);
-    min-width: 320px;
-    margin-bottom: 40px;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 24px;
-    color: #2980b9;
-    font-weight: 700;
-}
-
-tela {
-    display: flex;
-    flex-direction: column;
-}
-
-texto {
-    margin-bottom: 6px;
-    color: #ffffff;
-    font-size: 15px;
+.label_campo {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
     font-weight: 500;
+    color: #ccc;
 }
 
 input[type="text"],
 input[type="password"] {
-    padding: 10px;
-    margin-bottom: 18px;
-    border: 1px solid #b2bec3;
-    border-radius: 6px;
-    font-size: 15px;
-    transition: border 0.2s;
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #e0e0e0;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
 }
 
 input[type="text"]:focus,
 input[type="password"]:focus {
-    border: 1.5px solid #2980b9;
+    border-color: #e63946;
     outline: none;
 }
 
-button[type="submit"] {
-    padding: 12px;
-    background: #000000;
+input::placeholder {
+    color: #999;
+}
+
+.opcoes_login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+}
+
+.lembrar_me {
+    display: flex;
+    align-items: center;
+    color: #ccc;
+}
+
+.lembrar_me input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #e63946; 
+}
+
+.link_ajuda {
+    color: #e63946;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.link_ajuda:hover {
+    color: #ff5565;
+    text-decoration: underline;
+}
+
+.btn_entrar {
+    width: 100%;
+    padding: 14px;
+    background: #e63946; 
     color: #fff;
     border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: 600;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.3s, transform 0.1s;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(230, 57, 70, 0.4);
 }
 
-button[type="submit"]:hover {
-    background: #0400ff;
+.btn_entrar:hover {
+    background: #ff5565;
+    transform: translateY(-2px);
 }
 
-a {
-    color: #2980b9;
-    text-decoration: none;
+.link_cadastro {
     text-align: center;
+    margin-top: 25px;
+    font-size: 0.95rem;
+    color: #ccc;
 }
 
-a:hover {
-    text-decoration: underline;
+@media (max-width: 480px) {
+    .container_login {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+    .opcoes_login {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
 }
