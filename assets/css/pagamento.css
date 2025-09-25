@@ -1,78 +1,195 @@
 body {
-    background: #f5f6fa;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0c0c0c;
+    color: #e0e0e0;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
-h1 {
-    text-align: center;
-    color: #ffffff;
-    margin-top: 40px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-quadro {
-    background: #ffffff;
-    max-width: 400px;
-    margin: 40px auto;
-    padding: 30px 40px;
+.cabecalho {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.cabecalho .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #e63946;
+}
+
+.menu-pesquisa {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 5px 15px;
+    height: 38px;
+    box-sizing: border-box;
+}
+
+.barra-pesquisa {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #333;
+    padding: 5px;
+    width: 250px;
+}
+
+.barra-pesquisa::placeholder {
+    color: #a0a0a0;
+}
+
+.carrinho {
+    font-size: 1rem; 
+    color: #999;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 600;
+}
+
+.carrinho:hover {
+    color: #e63946;
+}
+
+.conteudo-principal {
+    padding: 50px 20px;
+    min-height: calc(100vh - 120px);
+}
+
+.secao-pagamento {
+    background-color: #1a1a1a;
     border-radius: 10px;
-    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.08);
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.titulo-pagina {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.container-pagamento {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 40px;
 }
 
-texto {
-    font-weight: bold;
-    color: #636e72;
-    margin-bottom: 5px;
+@media (min-width: 768px) {
+    .container-pagamento {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
-input[type="text"],
-input[type="password"],
-input[type="number"] {
+.detalhes-pagamento,
+.resumo-pedido {
+    flex: 1;
+}
+
+.subtitulo {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+.formulario-pagamento .grupo-campo {
+    margin-bottom: 20px;
+}
+
+.formulario-pagamento input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #dfe6e9;
+    padding: 12px;
+    background-color: #333;
+    border: 1px solid #555;
     border-radius: 5px;
-    font-size: 16px;
-    transition: border-color 0.2s;
+    color: #e0e0e0;
+    box-sizing: border-box;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="number"]:focus {
-    border-color: #0984e3;
-    outline: none;
+.dois-campos {
+    display: flex;
+    gap: 20px;
 }
 
-button[type="submit"] {
-    background: #0984e3;
+.dois-campos .grupo-campo {
+    flex: 1;
+}
+
+.btn-confirmar {
+    width: 100%;
+    padding: 15px;
+    background-color: #555;
     color: #fff;
     border: none;
-    padding: 12px;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
-    margin-top: 10px;
-    transition: background 0.2s;
+    transition: background-color 0.3s ease;
 }
 
-button[type="submit"]:hover {
-    background: #74b9ff;
+.btn-confirmar:hover {
+    background-color: #e63946;
 }
 
-body {
-    background: linear-gradient(90deg, #f12c2c, #000000,  #000000, #000000 ,  #000000, #000000 ,  #000000 ,  #000000, #000000 ,  #f12c2c);
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
+.resumo-pedido {
+    background-color: #1f1f1f;
+    padding: 25px;
+    border-radius: 10px;
 }
 
-img {
-    display: block;
-    margin: 20px auto;
-    max-width: 250px;
-    height: auto;
+.itens-resumo {
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
 }
+
+.item-resumo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.item-resumo:hover {
+    color: #e63946;
+}
+
+.total-resumo {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.total-resumo:hover {
+    color: #e63946;
+}
+
