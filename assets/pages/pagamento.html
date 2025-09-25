@@ -1,34 +1,79 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - The Crow</title>
     <link rel="stylesheet" href="/assets/css/pagamento.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="shortcut icon" href="/assets/img/logo.png" type="image/x-icon">
-    <title>Pagamento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<div class="imagem">
-    <img src="/assets/img/logo.site.png" alt="Logo do Site">
-</div>
 <body>
-    <h1>Página de Pagamento</h1>
-    <quadro action="processar-pagamento" method="post">
-        <texto for="nome">Nome no Cartão:</texto>
-        <input type="text" id="nome" name="nome" required><br><br>
 
-        <texto for="numero-cartao">Número do Cartão:</texto>
-        <input type="text" id="numero-cartao" name="numero-cartao" maxlength="16" required><br><br>
+    <header class="cabecalho">
+        <nav class="container">
+            <a href="index.html" class="logo">The Crow</a>
+            <div class="menu-pesquisa">
+                <input type="text" placeholder="Pesquisar..." class="barra-pesquisa">
+                </div>
+            <a href="carrinho.html" class="carrinho">Carrinho</a>
+        </nav>
+    </header>
 
-        <texto for="validade">Validade (MM/AA):</texto>
-        <input type="text" id="validade" name="validade" maxlength="5" required><br><br>
+    <main class="conteudo-principal">
+        <section class="secao-pagamento">
+            <h1 class="titulo-pagina">Finalizar Pedido</h1>
+            
+            <div class="container-pagamento">
+                
+                <div class="detalhes-pagamento">
+                    <h2 class="subtitulo">Informações de Pagamento</h2>
+                    <form action="#" method="post" class="formulario-pagamento">
+                        <div class="grupo-campo">
+                            <input type="text" id="nome-cartao" name="nome-cartao" placeholder="Nome no Cartão" required>
+                        </div>
+                        <div class="grupo-campo">
+                            <input type="text" id="numero-cartao" name="numero-cartao" placeholder="Número do Cartão" required>
+                        </div>
+                        <div class="dois-campos">
+                            <div class="grupo-campo">
+                                <input type="text" id="validade" name="validade" placeholder="Validade (MM/AA)" required>
+                            </div>
+                            <div class="grupo-campo">
+                                <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+                            </div>
+                        </div>
+                        <div class="grupo-campo">
+                            <input type="text" id="cep" name="cep" placeholder="CEP" required>
+                        </div>
+                        <button type="submit" class="btn-confirmar">Confirmar Pagamento</button>
+                    </form>
+                </div>
+                
+                <div class="resumo-pedido">
+                    <h2 class="subtitulo">Resumo do Pedido</h2>
+                    <div class="itens-resumo">
+                        <div class="item-resumo">
+                            <span>Sneaker Exemplo</span>
+                            <span>R$ 299,90</span>
+                        </div>
+                        <div class="item-resumo">
+                            <span>Taxa de Envio</span>
+                            <span>R$ 25,00</span>
+                        </div>
+                    </div>
+                    <div class="total-resumo">
+                        <strong>Total:</strong>
+                        <strong>R$ 324,90</strong>
+                    </div>
+                </div>
 
-        <texto for="cvv">CVV:</texto>
-        <input type="password" id="cvv" name="cvv" maxlength="4" required><br><br>
+            </div>
+            
+        </section>
+    </main>
 
-        <texto for="valor">Valor:</texto>
-        <input type="number" id="valor" name="valor" step="0.01" required><br><br>
-
-        <button type="submit">Pagar</button>
-    </quadro>
 </body>
 </html>
