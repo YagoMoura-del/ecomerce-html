@@ -3,29 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - The Crow</title>
+    <title>The Crow</title>
     <link rel="stylesheet" href="/assets/css/contato.css">
+    <link rel="shortcut icon" href="/assets/img/logo.png" type="image/x-icon">
 </head>
 <body>
-    <main>
-        <section class="formulario-contato">
-            <h2>Entre em Contato</h2>
-            <form action="#" method="POST">
-                <div class="grupo-formulario">
-                    <label for="name">Nome:</label>
-                    <input type="text" id="name" name="name" required>
+
+    <main class="conteudo_principal">
+        <h1 class="titulo_pagina">Fale Conosco</h1>
+
+        <div class="card_contato_unico">
+            
+            <h2 class="titulo_card_contato">Envie sua Mensagem</h2>
+
+            <form action="" method="POST" class="formulario_contato">
+                <div class="grupo_formulario">
+                    <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
                 </div>
-                <div class="grupo-formulario">
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="grupo_formulario">
+                    <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
                 </div>
-                <div class="grupo-formulario">
-                    <label for="message">Mensagem:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                <div class="grupo_formulario">
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua Mensagem..." required></textarea>
                 </div>
-                <button type="submit">Enviar Mensagem</button>
+                <button type="submit" class="btn_enviar">Enviar Mensagem</button>
             </form>
-        </section>
+
+            <div class="info_rodape_card">
+                <h3 class="titulo_info_card">Outros Meios</h3>
+                <p>
+                    📧 Email: <a href="mailto:contato@thecrow.com" class="link_info">contato@thecrow.com</a>
+                </p>
+                <p>
+                    📞 Telefone: (11) 98765-4321
+                </p>
+            </div>
+        </div>
+        
     </main>
 </body>
+</html>
 </html>
